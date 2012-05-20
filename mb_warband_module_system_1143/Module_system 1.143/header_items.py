@@ -100,6 +100,15 @@ ek_foot   = 6
 ek_gloves = 7
 ek_horse  = 8
 ek_food   = 9
+##diplomacy start+
+dplmc_ek_alt_item_a = 10
+dplmc_ek_alt_item_b = 11
+dplmc_ek_alt_item_c = 12
+dplmc_ek_alt_item_d = 13
+
+dplmc_ek_alt_items_begin = dplmc_ek_alt_item_a
+dplmc_ek_alt_items_end   = dplmc_ek_alt_item_d + 1
+##diplomacy end+
 
 
 max_inventory_items = 96
@@ -375,4 +384,10 @@ itc_greatlance = itcf_thrust_onehanded_lance |itcf_thrust_onehanded_lance_horseb
 ixmesh_inventory   = 0x1000000000000000
 ixmesh_flying_ammo = 0x2000000000000000
 ixmesh_carry       = 0x3000000000000000
+
+###WSE - Warband Script Enhancer 2.4.7 by cmpxchg8b
+itp_show_body = 0x40000000 # forces showing body (works on body armor items)
+itp_offset_mortschlag = 0x2000000000000 # offsets melee weapon to mortschlag grip
+itp_offset_melee_firearm = 0x4000000000000 # offsets pistol/musket to melee grip
+itp_offset_flip = 0x8000000000000 # flips melee weapon model 180 degrees on y-axis
 
