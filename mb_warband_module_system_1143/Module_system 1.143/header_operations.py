@@ -386,8 +386,8 @@ overlay_set_container_overlay            	= 951 # (overlay_set_container_overlay
 
 show_object_details_overlay               = 960 # (show_object_details_overlay, <value>), #0 = hide, 1 = show
 
-show_item_details                         = 970 # (show_item_details, <item_id>, <position_no>, <show_default_text_or_not>) #show_default_text_or_not should be 1 for showing "default" for default item costs
-close_item_details                        = 971 # (close_item_details)
+show_item_details      = 970 # (show_item_details, <item_id>, <position_no>, <show_default_text_or_not>) #show_default_text_or_not should be 1 for showing "default" for default item costs
+close_item_details     = 971 # (close_item_details)
 show_item_details_with_modifier           = 972 # (show_item_details_with_modifier, <item_id>, <item_modifier>, <position_no>, <show_default_text_or_not>) #show_default_text_or_not should be 1 for showing "default" for default item costs
 
 context_menu_add_item       = 980 # (right_mouse_menu_add_item, <string_id>, <value>), #must be called only inside script_game_right_mouse_menu_get_buttons
@@ -1362,6 +1362,10 @@ lhs_operations = [try_for_range,
                   troop_get_xp,
                   troop_get_class,
                   troop_inventory_slot_get_item_amount,
+##diplomacy start+ Imported two lines from CC...
+                  troop_inventory_slot_set_item_amount, ## CC
+                  troop_inventory_slot_get_item_max_amount, ## CC
+##diplomacy end+
                   troop_get_inventory_capacity,
                   troop_get_inventory_slot,
                   troop_get_inventory_slot_modifier,

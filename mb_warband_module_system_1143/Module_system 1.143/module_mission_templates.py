@@ -35,6 +35,156 @@ from module_constants import *
 pilgrim_disguise = [itm_pilgrim_hood,itm_pilgrim_disguise,itm_practice_staff, itm_throwing_daggers]
 af_castle_lord = af_override_horse | af_override_weapons| af_require_civilian
 
+##diplomacy begin
+from header_skills import *
+
+dplmc_horse_speed = (
+  1, 0, 0, [],
+  [
+  (eq, "$g_dplmc_horse_speed", 0),
+  (try_for_agents, ":agent_no"),
+    (agent_is_alive, ":agent_no"),
+    (agent_is_human, ":agent_no"),
+    (agent_get_horse, ":horse_agent", ":agent_no"),
+    (try_begin),
+      (ge, ":horse_agent", 0),
+      (store_agent_hit_points, ":horse_hp",":horse_agent"),
+      (store_sub, ":lost_hp", 100, ":horse_hp"),
+      (try_begin),
+        (le, ":lost_hp", 15),
+        (val_div, ":lost_hp", 2),
+        (store_add, ":speed_factor", 100, ":lost_hp"),
+      (else_try),
+        (val_mul, ":lost_hp", 2),
+        (val_div, ":lost_hp", 3),
+        (store_sub, ":speed_factor", 115, ":lost_hp"),
+      (try_end),
+      (agent_get_troop_id, ":agent_troop", ":agent_no"),
+      (store_skill_level, ":skl_level", skl_riding, ":agent_troop"),
+      (store_mul, ":speed_multi", ":skl_level", 2),
+      (val_add, ":speed_multi", 100),
+      (val_mul, ":speed_factor", ":speed_multi"),
+      (val_div, ":speed_factor", 100),
+      (agent_set_horse_speed_factor, ":agent_no", ":speed_factor"),
+    (try_end),
+  (try_end),
+  ])
+
+dplmc_death_camera = (
+  0, 0, 0,
+  [(eq, "$g_dplmc_battle_continuation", 0),
+   (main_hero_fallen),
+   (eq, "$g_dplmc_cam_activated", 1),
+  ],
+  [
+    #(agent_get_look_position, pos1, ":player_agent"),
+
+    (get_player_agent_no, ":player_agent"),
+    (agent_get_team, ":player_team", ":player_agent"),
+    (try_begin),
+      (eq, "$g_dplmc_charge_when_dead", 1),
+      (team_get_movement_order, ":cur_order", ":player_team", grc_everyone),
+      (neq, ":cur_order", mordr_charge),
+      (team_give_order, ":player_team", grc_everyone, mordr_charge),
+    (try_end),
+
+    (mission_cam_get_position, pos1),
+
+    (assign, "$g_camera_rotate_x", 0),
+    (assign, "$g_camera_rotate_y", 0),
+    (assign, "$g_camera_rotate_z", 0),
+    (assign, "$g_camera_x", 0),
+    (assign, "$g_camera_y", 0),
+    (assign, "$g_camera_z", 0),
+
+    (try_begin),
+      (key_is_down, key_a),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_x", 10),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_d),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_x", 10),
+    (try_end),
+    (position_move_x, pos1, "$g_camera_x"),
+
+    (try_begin),
+      (key_is_down, key_w),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_y", 10),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_s),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_y", 10),
+    (try_end),
+    (position_move_y, pos1, "$g_camera_y"),
+
+    (try_begin),
+      (key_is_down, key_numpad_plus),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_z", 10),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_numpad_minus),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_z", 10),
+    (try_end),
+    (position_move_z, pos1, "$g_camera_z"),
+
+    (try_begin),
+      (key_is_down, key_numpad_6),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_rotate_z", 1),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_numpad_4),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_rotate_z", 1),
+    (try_end),
+    (position_rotate_z, pos1, "$g_camera_rotate_z"),
+
+    (try_begin),
+      (key_is_down, key_numpad_1),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_rotate_y", 1),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_numpad_3),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_rotate_y", 1),
+    (try_end),
+    (position_rotate_y, pos1, "$g_camera_rotate_y"),
+
+    (try_begin),
+      (key_is_down, key_numpad_8),
+      (mission_cam_set_mode, 1),
+      (val_add, "$g_camera_rotate_x", 1),
+    (try_end),
+    (try_begin),
+      (key_is_down, key_numpad_2),
+      (mission_cam_set_mode, 1),
+      (val_sub, "$g_camera_rotate_x", 1),
+    (try_end),
+    (position_rotate_x, pos1, "$g_camera_rotate_x"),
+
+    (mission_cam_set_position, pos1),
+
+    (try_begin),
+      (this_or_next|game_key_clicked, gk_view_char),
+      (this_or_next|game_key_clicked, gk_zoom),
+      (game_key_clicked, gk_cam_toggle),
+      (mission_cam_set_mode, 0),
+    (try_end),
+  ])
+
+dplmc_battle_mode_triggers = [
+    dplmc_horse_speed,
+    dplmc_death_camera,
+  ]
+##diplomacy end
+
 multiplayer_server_check_belfry_movement = (
   0, 0, 0, [],
   [
@@ -644,6 +794,20 @@ common_battle_tab_press = (
       (eq, "$g_battle_won", 1),
       (call_script, "script_count_mission_casualties_from_agents"),
       (finish_mission,0),
+    ##diplomacy begin
+   (else_try),
+      (eq, "$g_dplmc_battle_continuation", 0),
+      ##diplomacy start+ Import Caba`drin's battle continuation fix
+      (this_or_next|main_hero_fallen),   #CABA EDIT/FIX FOR DEATH CAM
+      ##diplomacy end+
+      (eq, "$pin_player_fallen", 1),
+      (question_box,"str_do_you_want_to_retreat"),
+##      (call_script, "script_simulate_retreat", 5, 20),
+##      (str_store_string, s5, "str_retreat"),
+##      (call_script, "script_count_mission_casualties_from_agents"),
+##      (set_mission_result, -1),
+##      (finish_mission,0),
+    ##diplomacy end
     (else_try),
       (call_script, "script_cf_check_enemies_nearby"),
       (question_box,"str_do_you_want_to_retreat"),
@@ -685,7 +849,10 @@ custom_battle_check_victory_condition = (
     (store_mission_timer_a,reg(1)),
     (ge,reg(1),10),
     (all_enemies_defeated, 2),
+    ##diplomacy begin
+    (this_or_next|eq, "$g_dplmc_battle_continuation", 0),
     (neg|main_hero_fallen, 0),
+    ##diplomacy end
     (set_mission_result,1),
     (display_message,"str_msg_battle_won"),
     (assign, "$g_battle_won",1),
@@ -697,10 +864,35 @@ custom_battle_check_victory_condition = (
     ])
 
 custom_battle_check_defeat_condition = (
-  1, 4, ti_once,
+  1, 4,
+##diplomacy begin
+0,
+##diplomacy end
   [
     (main_hero_fallen),
+    ##diplomacy begin
+    (try_begin),
+      (eq, "$g_dplmc_battle_continuation", 0),
+      (assign, ":num_allies", 0),
+      (try_for_agents, ":agent"),
+       (agent_is_ally, ":agent"),
+       (agent_is_alive, ":agent"),
+       (val_add, ":num_allies", 1),
+      (try_end),
+      (gt, ":num_allies", 0),
+      (try_begin),
+        (eq, "$g_dplmc_cam_activated", 0),
+        #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+        (assign, "$g_dplmc_cam_activated", 1),
+        (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+        (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+      (try_end),
+  (else_try),
+    ##diplomacy end
     (assign,"$g_battle_result",-1),
+    ##diplomacy begin
+    (try_end),
+    ##diplomacy end
     ],
   [
     (call_script, "script_custom_battle_end"),
@@ -883,7 +1075,10 @@ common_battle_check_victory_condition = (
     (store_mission_timer_a,reg(1)),
     (ge,reg(1),10),
     (all_enemies_defeated, 5),
-    (neg|main_hero_fallen, 0),
+    ##diplomacy begin
+    (this_or_next|eq, "$g_dplmc_battle_continuation", 0),
+    (neg|main_hero_fallen),
+    ##diplomacy end
     (set_mission_result,1),
     (display_message,"str_msg_battle_won"),
     (assign,"$g_battle_won",1),
@@ -919,11 +1114,33 @@ common_siege_refill_ammo = (
     ])
 
 common_siege_check_defeat_condition = (
-  1, 4, ti_once,
+  1, 4,
+##diplomacy begin
+0,
+##diplomacy end
   [
     (main_hero_fallen)
     ],
   [
+    ##diplomacy begin
+    (try_begin),
+      (eq, "$g_dplmc_battle_continuation", 0),
+      (assign, ":num_allies", 0),
+      (try_for_agents, ":agent"),
+       (agent_is_ally, ":agent"),
+       (agent_is_alive, ":agent"),
+       (val_add, ":num_allies", 1),
+      (try_end),
+      (gt, ":num_allies", 0),
+      (try_begin),
+        (eq, "$g_dplmc_cam_activated", 0),
+        #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+        (assign, "$g_dplmc_cam_activated", 1),
+        (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+        (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+      (try_end),
+    (else_try),
+    ##diplomacy end
     (assign, "$pin_player_fallen", 1),
     (get_player_agent_no, ":player_agent"),
     (agent_get_team, ":agent_team", ":player_agent"),
@@ -940,12 +1157,18 @@ common_siege_check_defeat_condition = (
     (set_mission_result,-1),
     (call_script, "script_count_mission_casualties_from_agents"),
     (finish_mission,0),
+    ##diplomacy begin
+    (try_end),
+    ##diplomacy end
     ])
 
 common_battle_order_panel = (
   0, 0, 0, [],
   [
     (game_key_clicked, gk_view_orders),
+    ##diplomacy begin
+    (neg|main_hero_fallen),
+    ##diplomacy end
     (neg|is_presentation_active, "prsnt_battle"),
     (start_presentation, "prsnt_battle"),
     ])
@@ -1502,7 +1725,22 @@ mission_templates = [
       ], 
       [
 		(party_get_slot, ":tavernkeeper", "$g_encountered_party", slot_town_tavernkeeper),
-		(start_mission_conversation, ":tavernkeeper"),	 
+		##diplomacy start+
+		#Turn of this !@#$%ing obnoxious and totally illogical restriction provided:
+		(try_begin),
+			#1) there is an actual fight
+			(gt, "$g_main_attacker_agent", 0),
+			(agent_is_alive, "$g_main_attacker_agent"),
+			(neg|agent_is_wounded, "$g_main_attacker_agent"),
+			#2) the player is the lord of this town, a mercenary captain in the kingdom's employ, or ruler of this kingdom
+			(store_faction_of_party , ":center_faction", "$g_encountered_party"),
+			(this_or_next|eq, ":center_faction", "$players_kingdom"),
+				(eq, ":center_faction", "fac_player_supporters_faction"),
+		(else_try),
+		#Else, original behavior:
+			(start_mission_conversation, ":tavernkeeper"),
+		(try_end),
+		##diplomacy stop+
 	  ]),
 	  	  	  
 	  #Check for weapon in hand of attacker, also, everyone gets out of the way
@@ -2305,6 +2543,10 @@ mission_templates = [
                            (call_script, "script_place_player_banner_near_inventory"),
                            (call_script, "script_combat_music_set_situation_with_culture"),
                            (assign, "$g_defender_reinforcement_limit", 2),
+                           ##diplomacy begin
+                           (assign, "$g_dplmc_cam_activated", 0),
+                           (assign, "$g_dplmc_charge_when_dead", 0),
+                           ##diplomacy end
                            ]),
 
       common_music_situation_update,
@@ -2361,15 +2603,42 @@ mission_templates = [
       common_battle_check_victory_condition,
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+              (try_begin),
+                (eq, "$g_dplmc_battle_continuation", 0),
+                (assign, ":num_allies", 0),
+                (try_for_agents, ":agent"),
+                 (agent_is_ally, ":agent"),
+                 (agent_is_alive, ":agent"),
+                 (val_add, ":num_allies", 1),
+                (try_end),
+                (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 10, 20, 1),
               (assign, "$g_battle_result", -1),
               (set_mission_result,-1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission,0)]),
+              (finish_mission,0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
+            ]),
 
       common_battle_inventory,
 
@@ -2408,7 +2677,10 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
 
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
   (
@@ -2450,21 +2722,51 @@ mission_templates = [
       common_battle_check_victory_condition,
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+              (try_begin),
+                (eq, "$g_dplmc_battle_continuation", 0),
+                (assign, ":num_allies", 0),
+                (try_for_agents, ":agent"),
+                 (agent_is_ally, ":agent"),
+                 (agent_is_alive, ":agent"),
+                 (val_add, ":num_allies", 1),
+                (try_end),
+                (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 10, 20, 1),
               (assign, "$g_battle_result", -1),
               (set_mission_result, -1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission, 0)]),
+              (finish_mission, 0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
+              ]),
 
       common_battle_inventory,      
       common_battle_order_panel,
       common_battle_order_panel_tick,
-      
-    ],
+
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
 
@@ -2537,15 +2839,42 @@ mission_templates = [
 
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+              (try_begin),
+                (eq, "$g_dplmc_battle_continuation", 0),
+                (assign, ":num_allies", 0),
+                (try_for_agents, ":agent"),
+                 (agent_is_ally, ":agent"),
+                 (agent_is_alive, ":agent"),
+                 (val_add, ":num_allies", 1),
+                (try_end),
+                (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 10, 20, 1),
               (assign, "$g_battle_result", -1),
               (set_mission_result,-1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission,0)]),
+              (finish_mission,0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
+          ]),
 
       common_battle_inventory,
       common_battle_order_panel,
@@ -2561,7 +2890,10 @@ mission_templates = [
 ##          (store_mission_timer_a,reg(1)),(ge,reg(1),4),
 ##          (call_script, "script_battle_tactic_apply"),
 ##          ], []),
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
 
@@ -2754,6 +3086,10 @@ mission_templates = [
         ]),
         
       (0, 0, ti_once, [], [(assign,"$g_battle_won",0),
+                           ##diplomacy begin
+                           (assign, "$g_dplmc_cam_activated", 0),
+                           (assign, "$g_dplmc_charge_when_dead", 1),
+                           ##diplomacy end
                            (call_script, "script_music_set_situation_with_culture", mtf_sit_ambushed),
                            ]),
       
@@ -2769,21 +3105,50 @@ mission_templates = [
       common_battle_check_victory_condition,
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+              (try_begin),
+                (eq, "$g_dplmc_battle_continuation", 0),
+                (assign, ":num_allies", 0),
+                (try_for_agents, ":agent"),
+                 (agent_is_ally, ":agent"),
+                 (agent_is_alive, ":agent"),
+                 (val_add, ":num_allies", 1),
+                (try_end),
+                (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 5, 20, 0),
               (assign, "$g_battle_result", -1),
               (set_mission_result,-1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission,0)
+              (finish_mission,0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
               ]),
       
       common_battle_order_panel,
       common_battle_order_panel_tick,
       common_battle_inventory,
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
   (
@@ -2818,6 +3183,10 @@ mission_templates = [
         ]),
         
       (0, 0, ti_once, [], [(assign,"$g_battle_won",0),
+                           ##diplomacy begin
+                           (assign, "$g_dplmc_cam_activated", 0),
+                           (assign, "$g_dplmc_charge_when_dead", 1),
+                           ##diplomacy end
                            (call_script, "script_music_set_situation_with_culture", mtf_sit_ambushed),
                            ]),
       
@@ -2833,21 +3202,52 @@ mission_templates = [
       common_battle_check_victory_condition,
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+              (try_begin),
+                (eq, "$g_dplmc_battle_continuation", 0),
+                (eq, "$g_dplmc_cam_activated", 0),
+                (assign, ":num_allies", 0),
+                (try_for_agents, ":agent"),
+                 (agent_is_ally, ":agent"),
+                 (agent_is_alive, ":agent"),
+                 (val_add, ":num_allies", 1),
+                (try_end),
+                (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 5, 20, 0),
               (assign, "$g_battle_result", -1),
               (set_mission_result,-1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission,0)
+              (finish_mission,0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
+
               ]),
 
       common_battle_order_panel,
       common_battle_order_panel_tick,
       common_battle_inventory,
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
   (
@@ -2910,6 +3310,10 @@ mission_templates = [
         (finish_mission,0),]),
         
       (0, 0, ti_once, [], [(assign,"$g_battle_won",0),
+                           ##diplomacy begin
+                           (assign, "$g_dplmc_cam_activated", 0),
+                           (assign, "$g_dplmc_charge_when_dead", 1),
+                           ##diplomacy end
                            (call_script, "script_combat_music_set_situation_with_culture"),
                            ]),
       
@@ -2933,20 +3337,50 @@ mission_templates = [
 
       common_battle_victory_display,
 
-      (1, 4, ti_once, [(main_hero_fallen)],
+      (1, 4,
+      ##diplomacy begin
+      0,
+      ##diplomacy end
+      [(main_hero_fallen)],
           [
+              ##diplomacy begin
+            (try_begin),
+              (eq, "$g_dplmc_battle_continuation", 0),
+              (assign, ":num_allies", 0),
+              (try_for_agents, ":agent"),
+               (agent_is_ally, ":agent"),
+               (agent_is_alive, ":agent"),
+               (val_add, ":num_allies", 1),
+              (try_end),
+              (gt, ":num_allies", 0),
+                (try_begin),
+                  (eq, "$g_dplmc_cam_activated", 0),
+                  #(store_mission_timer_a, "$g_dplmc_main_hero_fallen_seconds"),
+                  (assign, "$g_dplmc_cam_activated", 1),
+                  (display_message, "@You have been knocked out by the enemy. Watch your men continue the fight without you or press Tab to retreat."),
+                  (display_message, "@To watch the fight you can use 'w, a, s, d, numpad_+/numpad_-' to move and 'numpad_1,2,3,4,6,8' to rotate the cam."),
+                (try_end),
+              (else_try),
+              ##diplomacy end
               (assign, "$pin_player_fallen", 1),
               (str_store_string, s5, "str_retreat"),
               (call_script, "script_simulate_retreat", 5, 20, 0),
               (assign, "$g_battle_result", -1),
               (set_mission_result, -1),
               (call_script, "script_count_mission_casualties_from_agents"),
-              (finish_mission,0)]),
+              (finish_mission,0),
+              ##diplomacy begin
+              (try_end),
+              ##diplomacy end
+]),
 
       common_battle_order_panel,
       common_battle_order_panel_tick,
       common_battle_inventory,
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
 
@@ -3028,7 +3462,10 @@ mission_templates = [
       common_siege_move_belfry,
       common_siege_rotate_belfry,
       common_siege_assign_men_to_belfry,
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
 
   (
@@ -3143,7 +3580,10 @@ mission_templates = [
 ##         (try_end),
 ##         ],
 ##       []),
-    ],
+    ]
+    ##diplomacy begin
+    + dplmc_battle_mode_triggers,
+    ##diplomacy end
   ),
   
 
@@ -7658,7 +8098,10 @@ mission_templates = [
       custom_battle_check_victory_condition,
       common_battle_victory_display,
       custom_battle_check_defeat_condition,
-    ],
+    ]
+	##diplomacy begin
+	+ dplmc_battle_mode_triggers,
+	##diplomacy end
   ),
 
   (
@@ -10615,7 +11058,6 @@ mission_templates = [
          
            (store_mission_timer_a, "$g_round_finish_time"),
            (assign, "$g_round_ended", 1),
-
            (assign, "$g_flag_is_not_ready", 1),
         
            (assign, "$g_winner_team", 0),

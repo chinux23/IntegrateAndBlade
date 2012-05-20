@@ -541,5 +541,17 @@ mesh_flag_project_rb_miss = 539
 mesh_mp_ui_host_maps_16 = 540
 mesh_mp_ui_host_maps_17 = 541
 mesh_mp_ui_host_maps_18 = 542
+mesh_longer_button = 543
+mesh_longer_button_down = 544
+mesh_message_window = 545
+mesh_face_gen_window = 546
+mesh_options_window = 547
+mesh_note_window = 548
+mesh_drop_button = 549
+mesh_drop_button_down = 550
+mesh_drop_button_hl = 551
+mesh_drop_button_child = 552
+mesh_drop_button_child_down = 553
+mesh_drop_button_child_hl = 554
 
 
