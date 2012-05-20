@@ -1,0 +1,7 @@
+> Info
+Time: 20/05/2012 18:54:50 
+Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000000, 0x00000000)
+> Stack trace
+0x0054E510 mb_warband.exe+0x14E510 (??+0x0)
+0x0054E510 mb_warband.exe+0x14E510 (??+0x0)
+>

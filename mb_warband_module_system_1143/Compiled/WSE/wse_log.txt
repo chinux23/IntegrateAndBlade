@@ -1,0 +1,4 @@
+[14:58:45] WSE v2.6.2 by cmpxchg8b (Build date: Mar 28 2012 19:41:05)
+[14:58:45] WSE path: C:\Program Files (x86)\Mount&Blade Warband\Modules\Diplo+PBOD\WSE\
+[14:58:45] WSE netcode version: 5
+[14:58:45] Warband version: vanilla
