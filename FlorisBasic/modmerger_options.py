@@ -9,7 +9,7 @@ DEBUG_MODE = -1
 
 # fill this in yourself with the module system you are using, so that some mods can make smarter decisions on how to merge with your source.
 module_sys_info = {
-        "version": 1143,      # version number * 1000
+        "version": 1127,      # version number * 1000
 }
 
 options={
@@ -24,13 +24,7 @@ options={
 
 mods_active = [
 # insert the active mod names here
-    "pbod",         # Caba'drin's Pre-Battle Orders & Deployment v0.95
-	"formations",   # motomataru's formations v4beta    
-	"formAI",       # motomataru's formations v4beta AI extension.
-	"dplmc", 		# to include the horse speed trigger and disable diplo's battle continuation option
-	"native_bugfix",
-	"wse",          # cmpchg8b's Warband Script Enhancer extra scripts (v2.4.8)
-    "itemsbasic",		# Minimal and Extended items for the Basic version
+	"itemsbasic",		# Minimal and Extended items for the Basic version
 ]
 
 
