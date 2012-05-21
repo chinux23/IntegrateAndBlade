@@ -1,4 +1,4 @@
-[00:27:44] WSE v2.6.2 by cmpxchg8b (Build date: Mar 28 2012 19:41:05)
-[00:27:44] WSE path: C:\Program Files (x86)\Mount&Blade Warband\Modules\Diplo+PBOD+Floris+SourceMerge\WSE\
-[00:27:44] WSE netcode version: 5
-[00:27:44] Warband version: vanilla
+[05:55:46] WSE v2.6.2 by cmpxchg8b (Build date: Mar 28 2012 19:41:05)
+[05:55:46] WSE path: C:\Program Files (x86)\Mount&Blade Warband\Modules\Diplo+PBOD+Floris+SourceMerge\WSE\
+[05:55:46] WSE netcode version: 5
+[05:55:46] Warband version: vanilla

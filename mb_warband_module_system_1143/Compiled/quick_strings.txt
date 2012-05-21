@@ -1,4 +1,7 @@
-1342
+1345
+qstr_{reg61}.0{reg62} {reg61}.0{reg62}
+qstr_{reg61}.{reg62} {reg61}.{reg62}
+qstr_Shot_distance:_{s1}_ Shot_distance:_{s1}_meters.
 qstr_Next_Page Next_Page
 qstr_Mod_Options Mod_Options
 qstr_Full_PBOD^Features Full_PBOD^Features
