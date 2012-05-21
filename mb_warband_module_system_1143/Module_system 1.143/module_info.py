@@ -6,4 +6,4 @@
 
 #export_dir = "test/"
 #export_dir = "C:/Program Files/Mount&Blade/Modules/Native/"
-export_dir = "./out/"
+export_dir = "../../../Diplo+PBOD+Floris+SourceMerge/"
