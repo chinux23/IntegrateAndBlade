@@ -247,11 +247,11 @@
   1.000000 walk_backward_right_hips_right 0 32 805306628 58726 0.000000 0.000000 0.000000  0.000000 
  walk_backward_right_hips_left 256 17825792  1
   1.000000 walk_backward_right_hips_left 0 32 805306628 58726 0.000000 0.000000 0.000000  0.000000 
- walk_forward_crouch 256 0  1
-  1.700000 low_walk 0 48 536870912 58726 0.0 0.0 0.0 0.0 
- stand_to_crouch 256 0  1
+ walk_forward_crouch 256 17825793  1
+  1.700000 low_walk 0 48 805306628 58726 0.000000 0.000000 0.000000  0.000000 
+ stand_to_crouch 256 83886081  1
   1.000000 crouch_down 0 81 2 0 0.000000 0.000000 0.000000  0.0 
- crouch_to_stand 256 0  1
+ crouch_to_stand 256 50331649  1
   1.000000 crouch_down 154 185 2 0 0.000000 0.000000 0.000000  0.0 
  ride_0 256 16777216  1
   15.000000 stand_onhorse 0 456 268435456 0 0.0 0.0 0.0 0.0 
@@ -938,26 +938,28 @@
   1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
  unequip_bayonet 0 184549446  1
   1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_14 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_15 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_16 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_17 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_18 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_19 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_20 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_21 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_22 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
- unused_human_anim_23 0 0  1
-  1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
+ spearwall_bracing 66562 67108897  1
+  2.500000 pike_brace 0 190 2 0 0.0 0.0 0.0 0.0 
+ spearwall_bracing_low 66562 67108897  1
+  3.000000 pike_brace 329 535 2 0 0.0 0.0 0.0 0.0 
+ spearwall_bracing_recover 1026 33554527  1
+  1.500000 pike_brace 191 329 7 0 0.0 0.0 0.0 0.0 
+ spearwall_bracing_recoil 1678770176 35651617  1
+  0.700000 anim_human 27316 27313 3 0 0.0 0.0 0.0 0.0 
+ shield_bash 1024 574619728  1
+  0.750000 shield_bash 0 30 4 0 0.0 0.0 0.0 0.0 
+ shield_strike 1026 176160848  3
+  2.000000 anim_human 45000 45010 516 0 0.0 0.0 0.0 0.0 
+  2.500000 anim_human 45400 45453 515 0 0.0 0.0 0.0 0.0 
+  2.500000 anim_human 45400 45445 515 0 0.0 0.0 0.0 0.0 
+ walk_backward_crouch 256 17825793  1
+  1.700000 low_walk 48 0 2415919364 58726 0.000000 0.000000 0.000000  0.000000 
+ walk_left_crouch 256 17825793  1
+  1.700000 crouch_side 58 0 2415919364 58726 0.000000 0.000000 0.000000  0.000000 
+ walk_right_crouch 256 17825793  1
+  1.700000 crouch_side 0 58 2415919364 58726 0.000000 0.000000 0.000000  0.000000 
+ crouch_to_low 256 50331681  1
+  0.700000 crouch_down 154 180 2 0 0.000000 0.000000 0.000000  0.0 
  unused_human_anim_24 0 0  1
   1.000000 anim_human 0 1 0 0 0.0 0.0 0.0 0.0 
  unused_human_anim_25 0 0  1
