@@ -1,6 +1,13 @@
 from ID_items import *
 from ID_quests import *
 from ID_factions import *
+from ID_troops import *
+from ID_parties import *
+from ID_animations import *
+from header_skills import *
+from header_troops import *
+from header_triggers import *
+
 ##############################################################
 # These constants are used in various files.
 # If you need to define a value that will be used in those files,
@@ -2220,6 +2227,33 @@ DPLMC_VERSION_LOW_7_BITS = 68 #Number that comes after the rest of the version c
 
 DPLMC_DIPLOMACY_VERSION_STRING = "4.2 (November 27, 2011)"
 
+
+###########################################################
+# Dynamic Kingdom Troop Tree Presentation Begin
+##########################################################
+title_pos_x   = 500
+title_pos_y   = 650
+title_size    = 2000
+title_black   = 0x000000
+title_red     = 0xFF0000
+title_yellow  = 0xFFFF00
+working_pos_y = 550
+large_size    = 1500
+medium_size   = 1200
+normal_size   = 1000
+small_size    = 800
+smaller_size  = 600
+tinny_size    = 450
+troop_tree_size_x  = 375
+troop_tree_size_y  = 500
+troop_tree_space_x = 170
+troop_tree_space_y = 140#170
+troop_tree_left    = 60
+###########################################################
+# Dynamic Kingdom Troop Tree Presentation End
+##########################################################
+
+
 #Perform a check to make sure constants are defined in a reasonable way.
 def _validate_constants(verbose=False):
     """Makes sure begin/end pairs have length of at least zero."""
@@ -2246,3 +2280,6 @@ def _validate_constants(verbose=False):
 _validate_constants(verbose=(__name__=="__main__"))
 ##diplomacy end+
 ## Prebattle Orders & Deployment Begin
+
+
+
