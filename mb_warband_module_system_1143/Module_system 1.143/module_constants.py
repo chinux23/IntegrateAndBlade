@@ -2246,3 +2246,18 @@ def _validate_constants(verbose=False):
 _validate_constants(verbose=(__name__=="__main__"))
 ##diplomacy end+
 ## Prebattle Orders & Deployment Begin
+
+
+####################################################################################################################################
+# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+lco_storage = "trp_companions_overview"
+lco_garbage = "trp_companions_discard"
+lco_run_presentation = 1
+lco_view_character = 2
+
+####################################################################################################################################
+# LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+

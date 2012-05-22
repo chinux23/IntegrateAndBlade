@@ -2151,6 +2151,17 @@ troops = [
    def_attrib|agi_21|int_30|cha_21|level(25),wp(130),knows_common|knows_riding_7|knows_horse_archery_5|knows_leadership_7,swadian_face_young_1, swadian_face_old_2],
 # recruiter kit end
   ##diplomacy end
+  
+####################################################################################################################################
+# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+  ["companions_overview", "{!}Hidden", "{!}Hidden",tf_hero,0,0,0,[],def_attrib|level(1),wp(100),knows_inventory_management_10,0],
+  ["companions_discard", "{!}Hidden", "{!}Hidden",tf_hero,0,0,0,[],def_attrib|level(1),wp(100),knows_inventory_management_10,0],
+####################################################################################################################################
+# LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+  
 ]
 
 

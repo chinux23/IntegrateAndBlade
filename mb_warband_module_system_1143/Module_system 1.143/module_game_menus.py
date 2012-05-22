@@ -18200,4 +18200,52 @@ goods, and books will never be sold. ^^You can change some settings here freely.
   ),
 ##diplomacy end+
 
+####################################################################################################################################
+# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+    ("lco_presentation",0,"Hidden Text","none",
+        [
+            (jump_to_menu, "mnu_lco_presentation"), # Self-reference
+            (try_begin),
+                (eq, "$g_lco_page", 2),
+                (start_presentation, "prsnt_equipment_overview"),
+            (else_try),
+                (start_presentation, "prsnt_companions_overview"),
+            (try_end),
+        ],
+        [("lco_go_back",[],"{!}Return",[])]
+    ),
+
+    ("lco_view_character",0,"Hidden Text","none",
+        [
+            (modify_visitors_at_site,"scn_conversation_scene"),
+            (reset_visitors),
+            (set_visitor,0,"trp_player"),
+            (set_visitor,17,"$g_lco_target"),
+            (set_jump_mission,"mt_conversation_encounter"),
+            (jump_to_scene,"scn_conversation_scene"),
+            (change_screen_map_conversation, "$g_lco_target"),
+        ],
+        [("lco_go_back",[],"{!}Return",[])]
+    ),
+
+    ("lco_auto_return",0,"Hidden Text","none",
+        [
+            (try_begin),
+                (gt, "$g_lco_auto_menu", 0),
+                (jump_to_menu, "$g_lco_auto_menu"),
+                (assign, "$g_lco_auto_menu", 0),
+            (else_try),
+                (change_screen_return),
+            (try_end),
+        ],
+        [("lco_go_back",[],"{!}Return",[])]
+    ),
+
+####################################################################################################################################
+# LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+
  ]
