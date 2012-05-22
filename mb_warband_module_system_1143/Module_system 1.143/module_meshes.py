@@ -50,6 +50,14 @@ meshes = [
   ("pic_arms_nord", 0, "pic_arms_nord", 0, 0, 0, 0, 0, 0, 1, 1, 1),
   ("pic_arms_rhodok", 0, "pic_arms_rhodok", 0, 0, 0, 0, 0, 0, 1, 1, 1),
   ("pic_sarranid_arms", 0, "pic_sarranid_arms", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  # Dunde's BEGIN  
+  ("pic_swad", 0, "pic_swad", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("pic_vaegir", 0, "pic_vaegir", 0, 0, 0, 0, 0, 0, 1, 1, 1),  
+  ("pic_khergit", 0, "pic_khergit", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("pic_nord", 0, "pic_nord", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("pic_rhodock", 0, "pic_rhodock", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("pic_sarranid_encounter", 0, "pic_sarranid_encounter", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  # Dunde's END
   ("pic_castle1", 0, "pic_castle1", 0, 0, 0, 0, 0, 0, 1, 1, 1),
   ("pic_castledes", 0, "pic_castledes", 0, 0, 0, 0, 0, 0, 1, 1, 1),
   ("pic_castlesnow", 0, "pic_castlesnow", 0, 0, 0, 0, 0, 0, 1, 1, 1),

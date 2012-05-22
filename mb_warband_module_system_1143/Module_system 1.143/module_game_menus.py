@@ -588,7 +588,11 @@ game_menus = [
        [(jump_to_menu, "mnu_morale_report"),
         ]
        ),
-
+       
+      ("faction_troop_tree",[],"View Factions' Troop Tree.",
+       [(start_presentation, "prsnt_faction_troop_tree"), 
+        ]
+       ),
 #NPC companion changes begin
 ##diplomacy start
       ("lord_relations",[],"View list of known lords by relation.",

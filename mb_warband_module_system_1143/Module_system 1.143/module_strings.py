@@ -4495,4 +4495,13 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("dplmc_s0_and_s1",   "{s0} and {s1}"),
  ("dplmc_s0_newline_s1", "{!}{s0}^{s1}"),
  ##diplomacy end+
+###########################################################
+# Dynamic Kingdom Troop Tree Presentation Begin
+##########################################################
+ ("faction_troop_tree", "Faction's Troop Tree"),
+###########################################################
+# Dynamic Kingdom Troop Tree Presentation End
+##########################################################
+
+ 
 ]
