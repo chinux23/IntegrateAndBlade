@@ -28,7 +28,7 @@ wp_tpe_mod_opt_award_items_on_win      = 0   # (0 - OFF / 1 - ON) With this enab
 #####                                                 DEPENDENCY MODS                                                 #####
 ###########################################################################################################################
 MOD_PBOD_INSTALLED                     = 1   # Caba'drin's Pre-Battle Orders & Deployment mod is installed.  Set to 0 if you do not use his mod.
-MOD_CUSTOM_COMMANDER_INSTALLED         = 1   # Rubik's Custom Commander mod is installed.  Set to 0 if you do not use his mod.
+MOD_CUSTOM_COMMANDER_INSTALLED         = 0   # Rubik's Custom Commander mod is installed.  Set to 0 if you do not use his mod.
 MOD_FLORIS_INSTALLED                   = 0   # Set to 1 hides the tournament configuration menu since Floris already handles these changes.
 MOD_ARENA_OVERHAUL_INSTALLED           = 1   # If Adorno's Arena Overhaul Mod is being used this should be set to 1.  If not, use 0.
 tpe_default_arena_scene                = 1   # 0 = Native, 1 = Arena Overhaul Mod

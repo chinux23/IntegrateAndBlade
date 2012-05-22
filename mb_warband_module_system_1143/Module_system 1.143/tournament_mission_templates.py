@@ -871,8 +871,8 @@ tpe_standard_triggers = [
 				(eq, "$g_wp_tpe_option_icd_active", 1),
 				(troop_slot_eq, "trp_tpe_presobj", tpe_trigger_enable_icd, 0),
 				(eq, MOD_CUSTOM_COMMANDER_INSTALLED, 1), # Dependency (Custom Commander)
-				(troop_slot_eq, TPE_OPTIONS, tpe_val_show_health, 1), # Default display option.
-				(call_script, "script_update_agent_hp_bar"),
+				# (troop_slot_eq, TPE_OPTIONS, tpe_val_show_health, 1), # Default display option.
+				# (call_script, "script_update_agent_hp_bar"),
 			(try_end),
 		]),
 		

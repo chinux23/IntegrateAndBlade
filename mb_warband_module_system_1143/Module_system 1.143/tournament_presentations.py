@@ -2417,12 +2417,12 @@ presentations = [
 			#hp bar
 			(try_begin),
 				(eq, MOD_CUSTOM_COMMANDER_INSTALLED, 1), # Dependency (Custom Commander)
-				(troop_slot_eq, TPE_OPTIONS, tpe_val_show_health, 1), # Default display option.
-				(try_for_agents, ":agent_no"),
-					(agent_set_slot, ":agent_no", slot_agent_hp_bar_overlay_id, 0),
-					(agent_set_slot, ":agent_no", slot_agent_hp_bar_bg_overlay_id, 0),
-				(try_end),
-				(call_script, "script_update_agent_hp_bar"),
+				# (troop_slot_eq, TPE_OPTIONS, tpe_val_show_health, 1), # Default display option.
+				# (try_for_agents, ":agent_no"),
+					# (agent_set_slot, ":agent_no", slot_agent_hp_bar_overlay_id, 0),
+					# (agent_set_slot, ":agent_no", slot_agent_hp_bar_bg_overlay_id, 0),
+				# (try_end),
+				# (call_script, "script_update_agent_hp_bar"),
 			(try_end),
 			
 			(assign, "$g_wp_tpe_icd_activated", 1),
