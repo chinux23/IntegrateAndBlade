@@ -1,6 +1,13 @@
 from ID_items import *
 from ID_quests import *
 from ID_factions import *
+from ID_troops import *
+from ID_parties import *
+from ID_animations import *
+from header_skills import *
+from header_troops import *
+from header_triggers import *
+
 ##############################################################
 # These constants are used in various files.
 # If you need to define a value that will be used in those files,
