@@ -31,6 +31,8 @@ mods_active = [
 	"native_bugfix",
 	"wse",          # cmpchg8b's Warband Script Enhancer extra scripts (v2.4.8)
     "itemsbasic",		# Minimal and Extended items for the Basic version
+    "tournament",      # Tournament Play Enhancements (1.5)
+    "gpu",                  # General Presentation Utilities (1.0)
 ]
 
 
