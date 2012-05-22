@@ -14547,6 +14547,14 @@ presentations = [
      # Create Objects
      (create_combo_label_overlay, "$g_presentation_obj_1"), #type
      (position_set_x, pos1, title_pos_x), (position_set_y, pos1, title_pos_y-50), (overlay_set_position, "$g_presentation_obj_1",  pos1),
+     
+     ## back Button added by eswallie
+     (create_game_button_overlay, "$g_presentation_obj_2", "@Done"),
+     (position_set_x, pos1, 900),
+     (position_set_y, pos1, 25),
+     (overlay_set_position, "$g_presentation_obj_2", pos1),
+     ## Back button added by eswallie
+     
      # Objects
      (assign, ":hi_faction", "fac_kingdoms_end"),
      (try_begin),
@@ -14585,7 +14593,14 @@ presentations = [
        (assign, "$temp", ":troop_no"), 
        (assign, "$g_presentation_next_presentation", "prsnt_faction_troop_tree"),
        (start_presentation, "prsnt_troop_note"),
-     (try_end), ]), 
+     (try_end), 
+         ## Back button code added by eswallie
+         (try_begin),
+           (eq, ":object", "$g_presentation_obj_2"),
+           (presentation_set_duration, 0),
+         (try_end), 
+         ## Back button code added by eswallie
+     ]), 
      ## Event to process when running the presentation
     (ti_on_presentation_run,
      [(try_begin),
