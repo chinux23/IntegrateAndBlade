@@ -79,3 +79,12 @@ dplmc_factions_begin = 1 #As mentioned in the notes above, this is hardcoded and
 dplmc_non_generic_factions_begin = [x[0] for x in enumerate(factions) if x[1][0] == "merchants"][0] + 1
 dplmc_factions_end   = len(factions)
 ##diplomacy end+
+# modmerger_start version=201 type=4
+try:
+    component_name = "factions"
+    var_set = { "factions":factions,"default_kingdom_relations":default_kingdom_relations, }
+    from modmerger import modmerge
+    modmerge(var_set, component_name)
+except:
+    raise
+# modmerger_end

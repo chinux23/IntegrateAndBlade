@@ -163,3 +163,12 @@ party_templates = [
 #recruiter kit end
    ##diplomacy end
 ]
+# modmerger_start version=201 type=2
+try:
+    component_name = "party_templates"
+    var_set = { "party_templates" : party_templates }
+    from modmerger import modmerge
+    modmerge(var_set)
+except:
+    raise
+# modmerger_end

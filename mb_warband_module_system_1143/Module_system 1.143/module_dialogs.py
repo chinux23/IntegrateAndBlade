@@ -40967,3 +40967,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 ]
+# modmerger_start version=201 type=2
+try:
+    component_name = "dialogs"
+    var_set = { "dialogs" : dialogs }
+    from modmerger import modmerge
+    modmerge(var_set)
+except:
+    raise
+# modmerger_end

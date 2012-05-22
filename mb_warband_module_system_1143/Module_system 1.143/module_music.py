@@ -280,3 +280,12 @@ tracks = [
   ("victorious_vaegir_3",				"victorious_vaegir_2.ogg",			mtf_persist_until_finished|mtf_culture_2|mtf_sit_victorious,								0),															# 88,5 dB
 
 ]
+# modmerger_start version=201 type=4
+try:
+    component_name = "music"
+    var_set = { "tracks":tracks, }
+    from modmerger import modmerge
+    modmerge(var_set, component_name)
+except:
+    raise
+# modmerger_end

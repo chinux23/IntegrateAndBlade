@@ -343,3 +343,12 @@ sounds = [
  ("enemy_scored_a_point",				sf_2d|sf_priority_10|sf_vol_10,								["min_enemy_scored_a_point.wav"]),
  ("whistle",							sf_priority_9,												["min_whistle.wav"]), #Floris
 ]
+# modmerger_start version=201 type=2
+try:
+    component_name = "sounds"
+    var_set = { "sounds" : sounds }
+    from modmerger import modmerge
+    modmerge(var_set)
+except:
+    raise
+# modmerger_end

@@ -6625,3 +6625,12 @@ simple_triggers = [
 
   
 ]
+# modmerger_start version=201 type=2
+try:
+    component_name = "simple_triggers"
+    var_set = { "simple_triggers" : simple_triggers }
+    from modmerger import modmerge
+    modmerge(var_set)
+except:
+    raise
+# modmerger_end
