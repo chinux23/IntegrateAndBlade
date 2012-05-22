@@ -626,4 +626,24 @@ meshes = [
   ("drop_button_child_down", 0, "button_drop_child_clicked", 0, 0, 0, 0, 0, 0, 1.0, 0.5, 0.5),
   ("drop_button_child_hl", 0, "button_drop_child_hl", 0, 0, 0, 0, 0, 0, 1.0, 0.5, 0.5),
 ##diplomacy start+
+####################################################################################################################################
+# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+  ("lco_background", 0, "mp_ui_bg", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_background_split", 0, "mp_ui_profile", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_panel", 0, "longer_button", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_panel_down", 0, "longer_button_down", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_garbage_area", 0, "mp_score_b", 0, 0, 0, 0, 0, 0, 1, 1, 1), #1255 780
+  ("lco_sort_inventory", 0, "small_arrow_down", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_sort_inventory_down", 0, "small_arrow_down_clicked", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_gold_icon", 0, "mp_ico_gold", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_square_button_up", 0, "button1_up", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("lco_square_button_down", 0, "button1_down", 0, 0, 0, 0, 0, 0, 1, 1, 1),
+
+####################################################################################################################################
+# LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+
+
 ]
