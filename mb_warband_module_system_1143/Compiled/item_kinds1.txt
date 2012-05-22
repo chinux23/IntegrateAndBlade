@@ -1,5 +1,5 @@
 itemsfile version 3
-1900
+1954
  itm_no_item INVALID_ITEM INVALID_ITEM 1  invalid_item 0  12582914 9223388529554358287 3 0 1.500000 100 0 0 0 0 16384 103 0 90 0 522 528
  0
 0
@@ -2448,6 +2448,230 @@ itemsfile version 3
  itm_dplmc_coat_of_plates_red_constable Constable_Coat_of_Plates Constable_Coat_of_Plates 1  coat_of_plates_red 0  553652237 0 3828 704643236 25.000000 100 0 52 16 0 0 0 0 0 0 0 0
  0
 
+0
+
+ itm_red_tpe_tunic Tournament_Tunic Tournament_Tunic 1  arena_tunic_red 0  16777229 0 1720 704643238 10.000000 55 0 15 8 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_blue_tpe_tunic Tournament_Tunic Tournament_Tunic 1  arena_tunic_blue 0  16777229 0 1544 704643236 10.000000 55 0 15 8 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_green_tpe_tunic Tournament_Tunic Tournament_Tunic 1  arena_tunic_green 0  16777229 0 1544 704643236 10.000000 55 0 15 8 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_gold_tpe_tunic Tournament_Tunic Tournament_Tunic 1  arena_tunic_yellow 0  16777229 0 1544 704643236 10.000000 55 0 15 8 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_red_tpe_armor Tournament_Armor Tournament_Armor 1  arena_armor_red 0  16777229 0 1720 704643238 22.000000 55 0 30 15 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_blue_tpe_armor Tournament_Armor Tournament_Armor 1  arena_armor_blue 0  16777229 0 1544 704643236 22.000000 55 0 30 15 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_green_tpe_armor Tournament_Armor Tournament_Armor 1  arena_armor_green 0  16777229 0 1544 704643236 22.000000 55 0 30 15 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_gold_tpe_armor Tournament_Armor Tournament_Armor 1  arena_armor_yellow 0  16777229 0 1544 704643236 22.000000 55 0 30 15 0 0 0 0 0 0 0 0
+ 1
+ 15
+0
+
+ itm_tpe_enhanced_shield_red Tournament_Shield Tournament_Shield 1  arena_shield_red 0  262151 4831838208 42 167772194 2.000000 100 0 15 0 0 600 100 0 60 0 0 0
+ 0
+0
+
+ itm_tpe_enhanced_shield_blue Tournament_Shield Tournament_Shield 1  arena_shield_blue 0  262151 4831838208 42 167772194 2.000000 100 0 15 0 0 600 100 0 60 0 0 0
+ 0
+0
+
+ itm_tpe_enhanced_shield_green Tournament_Shield Tournament_Shield 1  arena_shield_green 0  262151 4831838208 42 167772194 2.000000 100 0 15 0 0 600 100 0 60 0 0 0
+ 0
+0
+
+ itm_tpe_enhanced_shield_yellow Tournament_Shield Tournament_Shield 1  arena_shield_yellow 0  262151 4831838208 42 167772194 2.000000 100 0 15 0 0 600 100 0 60 0 0 0
+ 0
+0
+
+ itm_tpe_normal_boots Tournament_Greaves Tournament_Greaves 1  spl_greaves 0  536874766 0 34 123731968 1.000000 100 0 0 10 0 0 0 0 0 0 0 0
+ 0
+0
+
+ itm_tpe_enhanced_boots Tournament_Greaves Tournament_Greaves 1  lthr_greaves 0  536874766 0 34 123731968 1.000000 100 0 0 20 0 0 0 0 0 0 0 0
+ 0
+0
+
+ itm_tpe_normal_spear Tournament_Spear Tournament_Spear 1  spear 0  138674180 4222124851987200 0 8202 4.500000 100 0 0 0 0 12288 85 0 120 0 530 524
+ 0
+0
+
+ itm_tpe_enhanced_spear Tournament_Spear Tournament_Spear 1  spear 0  138674180 4222124851987200 0 8202 4.500000 100 0 0 0 0 18432 85 0 140 0 539 530
+ 0
+0
+
+ itm_tpe_normal_bow Tournament_Bow Tournament_Bow 2  hunting_bow 0  hunting_bow_carry 3458764513820540928  6291464 5905584128 0 655370 1.500000 100 0 0 0 0 0 90 40 0 0 536 0
+ 0
+0
+
+ itm_tpe_enhanced_bow Tournament_Bow Tournament_Bow 2  hunting_bow 0  hunting_bow_carry 3458764513820540928  6291464 5905584128 0 655370 1.500000 100 0 0 0 0 0 95 40 0 0 548 0
+ 0
+0
+
+ itm_tpe_normal_crossbow Tournament_Crossbow Tournament_Crossbow 1  crossbow_a 0  6291465 5637160960 0 131082 3.000000 100 0 0 0 0 0 50 68 0 1 542 0
+ 0
+0
+
+ itm_tpe_enhanced_crossbow Tournament_Crossbow Tournament_Crossbow 1  crossbow_a 0  6291465 5637160960 0 131082 3.000000 100 0 0 0 0 0 60 68 0 1 557 0
+ 0
+0
+
+ itm_tpe_normal_javelin Tournament_Javelins Tournament_Javelins 2  javelin 0  javelins_quiver_new 3458764513820540928  541065226 36507484160 0 4398046781448 5.000000 100 0 0 0 0 0 100 28 75 50 539 0
+ 0
+0
+
+ itm_tpe_normal_javelin_melee practice_javelin_melee practice_javelin_melee 1  javelin 0  138674180 4222124851990272 0 8202 1.000000 100 0 0 0 0 12288 90 0 75 0 528 524
+ 0
+0
+
+ itm_tpe_enhanced_javelin Tournament_Javelins Tournament_Javelins 2  javelin 0  javelins_quiver_new 3458764513820540928  541065226 36507484160 0 4398046781448 5.000000 100 0 0 0 0 0 100 28 75 50 552 0
+ 0
+0
+
+ itm_tpe_enhanced_javelin_melee Tournament_Javelin_Melee Tournament_Javelin_Melee 1  javelin 0  138674180 4222124851990272 0 8202 1.000000 100 0 0 0 0 12288 95 0 90 0 534 524
+ 0
+0
+
+ itm_tpe_normal_sword Tournament_Sword Tournament_Sword 1  practice_sword 0  12976130 9223388529554358287 3 0 1.500000 100 0 0 0 0 18432 95 0 90 0 528 530
+ 0
+0
+
+ itm_tpe_enhanced_sword Tournament_Sword Tournament_Sword 1  practice_sword 0  12976130 9223388529554358287 243 0 1.500000 100 0 0 0 0 27648 105 0 100 0 534 539
+ 0
+0
+
+ itm_tpe_normal_greatsword Tournament_Greatsword Tournament_Greatsword 1  heavy_practicesword 0  6684675 9223635919737716976 21 0 6.250000 100 0 0 0 0 27648 80 0 110 0 534 539
+ 0
+0
+
+ itm_tpe_enhanced_greatsword Tournament_Greatsword Tournament_Greatsword 1  heavy_practicesword 0  6291459 9223635924301119728 670 155668 2.750000 100 0 0 0 0 40960 90 0 120 0 539 552
+ 0
+0
+
+ itm_tpe_normal_lance Tournament_Lance Tournament_Lance 1  joust_of_peace 0  2286288900 201326848 18 0 4.250000 100 0 0 0 0 10240 70 0 200 0 527 522
+ 0
+0
+
+ itm_tpe_enhanced_lance Tournament_Lance Tournament_Lance 1  joust_of_peace 0  2286288900 201326848 90 0 4.250000 100 0 0 0 0 15360 75 0 240 0 535 527
+ 0
+0
+
+ itm_tpe_normal_horse_red Tournament_Horse Tournament_Horse 1  ho_vae_long_royalred 0  1 0 1224 41876193280 0.000000 50 0 15 0 0 100 41 45 110 0 10 0
+ 0
+0
+
+ itm_tpe_normal_horse_blue Tournament_Horse Tournament_Horse 1  ho_nor_war_bluebarded 0  1 0 1224 41876193280 0.000000 50 0 15 0 0 100 41 45 110 0 10 0
+ 0
+0
+
+ itm_tpe_normal_horse_green Tournament_Horse Tournament_Horse 1  ho_rho_war_deergreen 0  1 0 1224 41876193280 0.000000 50 0 15 0 0 100 41 45 110 0 10 0
+ 0
+0
+
+ itm_tpe_normal_horse_yellow Tournament_Horse Tournament_Horse 1  ho_sar_war_yellowroyal 0  1 0 1224 41876193280 0.000000 50 0 15 0 0 100 41 45 110 0 10 0
+ 0
+0
+
+ itm_tpe_enhanced_horse_red Tournament_Warhorse Tournament_Warhorse 1  ho_vae_long_royalred 0  1 0 1224 110595670016 0.000000 50 0 40 0 0 165 41 40 110 0 28 0
+ 0
+0
+
+ itm_tpe_enhanced_horse_blue Tournament_Warhorse Tournament_Warhorse 1  ho_nor_war_bluebarded 0  1 0 1224 110595670016 0.000000 50 0 40 0 0 165 41 40 110 0 28 0
+ 0
+0
+
+ itm_tpe_enhanced_horse_green Tournament_Warhorse Tournament_Warhorse 1  ho_rho_war_deergreen 0  1 0 1224 110595670016 0.000000 50 0 40 0 0 165 41 40 110 0 28 0
+ 0
+0
+
+ itm_tpe_enhanced_horse_yellow Tournament_Warhorse Tournament_Warhorse 1  ho_sar_war_yellowroyal 0  1 0 1224 110595670016 0.000000 50 0 40 0 0 165 41 40 110 0 28 0
+ 0
+0
+
+ itm_tpe_normal_axe Tournament_Axe Tournament_Axe 1  we_sar_axe_onehanded 0  79953922 9223388530091229198 24 262164 2.000000 100 0 0 0 0 20480 90 0 70 0 256 532
+ 0
+0
+
+ itm_tpe_enhanced_axe Tournament_Axe Tournament_Axe 1  we_sar_axe_onehanded 0  79953922 9223388530091229198 24 262164 2.000000 100 0 0 0 0 28672 95 0 75 0 256 540
+ 0
+0
+
+ itm_tpe_normal_quarterstaff Tournament_Staff Tournament_Staff 1  we_sar_spear_staff 0  1212547076 4222129415393024 9 0 2.500000 100 0 0 0 0 22528 110 0 118 0 530 534
+ 0
+0
+
+ itm_tpe_enhanced_quarterstaff Tournament_Staff Tournament_Staff 1  we_sar_spear_staff 0  1212547076 4222129415393024 9 0 2.500000 100 0 0 0 0 31744 115 0 118 0 537 543
+ 0
+0
+
+ itm_tpe_normal_greataxe Tournament_Greataxe Tournament_Greataxe 1  tutorial_battle_axe 0  73662467 9223635923965575392 0 262164 5.000000 100 0 0 0 0 27648 85 0 108 0 512 539
+ 0
+0
+
+ itm_tpe_enhanced_greataxe Tournament_Greataxe Tournament_Greataxe 1  tutorial_battle_axe 0  73662467 9223635923965575392 0 262164 5.000000 100 0 0 0 0 38912 90 0 108 0 512 550
+ 0
+0
+
+ itm_tpe_normal_scimitar Tournament_Scimitar Tournament_Scimitar 2  we_sar_sword_scimitar 0  we_sar_scabbard_scimitar 3458764513820540928  4194306 9223388564182532110 411 155668 1.500000 60 0 0 0 8 16384 100 0 97 0 512 528
+ 0
+0
+
+ itm_tpe_enhanced_scimitar Tournament_Scimitar Tournament_Scimitar 2  we_sar_sword_scimitar 0  we_sar_scabbard_scimitar 3458764513820540928  4194306 9223388564182532110 411 155668 1.500000 60 0 0 0 8 22528 108 0 97 0 512 534
+ 0
+0
+
+ itm_tpe_normal_throwing_axe Tournament_Throwing_Axes Tournament_Throwing_Axes 1  we_nor_axe_throw_light 0  541065226 196608 100 4398046519304 5.000000 100 0 0 0 0 0 85 18 53 4 542 0
+ 0
+0
+
+ itm_tpe_normal_throwing_axe_melee Tournament_Throwing_Axe Tournament_Throwing_Axe 1  we_nor_axe_throw_light 0  71303170 9223388529554358286 100 4398046519304 1.000000 100 0 0 0 0 27648 90 0 53 0 0 539
+ 0
+0
+
+ itm_tpe_enhanced_throwing_axe Tournament_Throwing_Axes Tournament_Throwing_Axes 1  we_nor_axe_throw_light 0  541065226 196608 100 4398046519304 5.000000 100 0 0 0 0 0 85 18 53 4 554 0
+ 0
+0
+
+ itm_tpe_enhanced_throwing_axe_melee Tournament_Throwing_Axe Tournament_Throwing_Axe 1  we_nor_axe_throw_light 0  71303170 9223388529554358286 100 4398046519304 1.000000 100 0 0 0 0 38912 95 0 63 0 0 550
+ 0
+0
+
+ itm_tpe_normal_throwing_daggers Tournament_Daggers Tournament_Daggers 1  practice_dagger 0  541065226 131072 0 4398046511112 3.500000 100 0 0 0 0 0 100 25 0 25 528 0
+ 0
+0
+
+ itm_tpe_normal_throwing_daggers_melee Practice_Dagger Practice_Dagger 1  practice_dagger 0  12730370 9223372037685248015 2 0 0.500000 100 0 0 0 0 14336 110 0 47 0 526 526
+ 0
+0
+
+ itm_tpe_enhanced_throwing_daggers Tournament_Daggers Tournament_Daggers 1  practice_dagger 0  541065226 131072 0 4398046511112 3.500000 100 0 0 0 0 0 110 25 0 25 534 0
+ 0
+0
+
+ itm_tpe_enhanced_throwing_daggers_melee Practice_Dagger Practice_Dagger 1  practice_dagger 0  12730370 9223372037685248015 2 0 0.500000 100 0 0 0 0 20480 115 0 47 0 532 532
+ 0
 0
 
  itm_items_end Items_End Items_End 1  practice_shield 0  0 0 1 0 0.000000 100 0 0 0 0 0 0 0 0 0 0 0

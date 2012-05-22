@@ -1,5 +1,5 @@
 scenesfile version 1
- 551
+ 573
 scn_random_scene random_scene 1792 none none 0.000000 0.000000 240.000000 240.000000 -0.500000 0x300028000003e8fa0000034e00004b34000059be 
   0 
   0 
@@ -2204,3 +2204,91 @@ scn_enterprise_oil_press enterprise_oil_press 1 oil_press_interior bo_oil_press_
   0 
   0 
  0 
+scn_town_1_arena_alternate town_1_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_thir_new 
+scn_town_2_arena_alternate town_2_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_thir_new 
+scn_town_3_arena_alternate town_3_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain_farmountain 
+scn_town_4_arena_alternate town_4_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain 
+scn_town_5_arena_alternate town_5_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain_farmountain 
+scn_town_6_arena_alternate town_6_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain 
+scn_town_7_arena_alternate town_7_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain 
+scn_town_8_arena_alternate town_8_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain_farmountain 
+scn_town_9_arena_alternate town_9_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x40001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_snow_farmountain 
+scn_town_10_arena_alternate town_10_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_steppe 
+scn_town_11_arena_alternate town_11_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x40001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_snow 
+scn_town_12_arena_alternate town_12_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_thir_new 
+scn_town_13_arena_alternate town_13_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ 0 
+scn_town_14_arena_alternate town_14_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_steppe 
+scn_town_15_arena_alternate town_15_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain 
+scn_town_16_arena_alternate town_16_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0xa0001d9300031ccb0000156f000048ba0000361c 
+  0 
+  0 
+ outer_terrain_plain 
+scn_town_17_arena_alternate town_17_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_steppe 
+scn_town_18_arena_alternate town_18_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_steppe 
+scn_town_19_arena_alternate town_19_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_desert 
+scn_town_20_arena_alternate town_20_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_desert 
+scn_town_21_arena_alternate town_21_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_desert 
+scn_town_22_arena_alternate town_22_arena_alternate 256 none none 0.000000 0.000000 100.000000 100.000000 -100.000000 0x00000002200005000005f57b00005885000046bd00006d9c 
+  0 
+  0 
+ outer_terrain_desert 

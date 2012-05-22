@@ -1,5 +1,5 @@
 questsfile version 1
-91
+92
 qst_deliver_message Deliver_Message_to_{s13} 2 {!}{s9}_asked_you_to_take_a_message_to_{s13}._{s13}_was_at_{s4}_when_you_were_given_this_quest. 
 qst_deliver_message_to_enemy_lord Deliver_Message_to_{s13} 2 {!}{s9}_asked_you_to_take_a_message_to_{s13}_of_{s15}._{s13}_was_at_{s4}_when_you_were_given_this_quest. 
 qst_raise_troops Raise_{reg1}_{s14} 2 {!}{s9}_asked_you_to_raise_{reg1}_{s14}_and_bring_them_to_him. 
@@ -90,4 +90,5 @@ qst_collect_men Collect_Five_Men 0 {!}{s9}_asked_you_to_collect_at_least_5_men_b
 qst_learn_where_merchant_brother_is Learn_Where_the_Hostages_are_Held. 0 {!}placeholder. 
 qst_save_relative_of_merchant Attack_the_Bandit_Lair 0 {!}placeholder. 
 qst_save_town_from_bandits Save_Town_from_Bandits 0 {!}placeholder. 
+qst_floris_active_tournament Attend_Tournament_in_{s13} 0 {!}A_tournament_of_champions_has_begun_in_the_town_of_{s13}_where_you_should_attend. 
 qst_quests_end Quests_End 0 {!}. 

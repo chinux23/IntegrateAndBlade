@@ -13,6 +13,7 @@ view_char
 training
 member_chat
 prisoner_chat
+lco_conversation_end
 award_fief_to_vassal
 award_fief_to_vassal_defer
 award_fief_to_vassal_2
@@ -604,6 +605,7 @@ lord_female_pc_marriage_proposal_rejected_confirm_yes
 lord_meet_neutral
 lord_intro
 lord_meet_enemy
+lord_talk
 lair_quest_intermediate_1
 lair_quest_intermediate_2
 lord_generic_mission_completed
@@ -642,7 +644,6 @@ lord_pay_debt_3_2
 lord_buy_prisoner
 lord_buy_prisoner_accept
 lord_buy_prisoner_deny
-lord_talk
 offer_gift_quest_complete
 intrigue_quest_state_complaint
 intrigue_quest_state_complaint_plyr
