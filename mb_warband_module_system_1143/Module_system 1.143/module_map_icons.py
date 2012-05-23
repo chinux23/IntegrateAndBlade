@@ -50,7 +50,7 @@ map_icons = [
   ("village_snow_deserted_a",mcn_no_shadow,"map_village_snow_deserted_a", 0.45, 0),
 
 
-  ("camp",mcn_no_shadow,"camp_tent", 0.13, 0),
+  ("camp",mcn_no_shadow,"map_camp_tent", 0.13, 0),
   ("ship",mcn_no_shadow,"boat_sail_on", 0.23, snd_footstep_grass, 0.0, 0.05, 0),
   ("ship_on_land",mcn_no_shadow,"boat_sail_off", 0.23, 0),
 
