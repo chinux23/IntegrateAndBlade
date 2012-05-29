@@ -101,6 +101,8 @@ tournament_items = [
 ["tpe_enhanced_throwing_daggers", "Tournament Daggers", [("practice_dagger",0)], itp_type_thrown |itp_primary|itp_next_item_as_melee ,itcf_throw_knife, 0 , weight(3.5)|difficulty(0)|spd_rtng(110) | shoot_speed(25) | thrust_damage(22 , blunt)|max_ammo(25)|weapon_length(0),imodbits_missile],
 	["tpe_enhanced_throwing_daggers_melee","Practice Dagger", [("practice_dagger",0)], itp_type_one_handed_wpn|itp_primary|itp_secondary|itp_no_parry|itp_wooden_attack, itc_dagger|itcf_carry_dagger_front_left, 2,weight(0.5)|spd_rtng(115)|weapon_length(47)|swing_damage(20, blunt)|thrust_damage(20, blunt),imodbits_none],
 ## TOURNAMENT PLAY ENHANCEMENTS end
+
+
 ]
 		
 from util_common import *

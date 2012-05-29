@@ -1870,4 +1870,5 @@ items = [
 ["sh_pla_rou_hermitage_a", "Decorated Hermitage Shield", [("sh_pla_rou_hermitage_a",0)], itp_merchandise|itp_type_shield, itcf_carry_round_shield,210,weight(4)|abundance(55)|hit_points(350)|body_armor(15)|spd_rtng(61)|shield_width(40)|difficulty(3),imodbits_shield,[],[fac_player_faction]],
 ["sh_pla_rou_hermitage_b", "Woman Hermitage Shield", [("sh_pla_rou_hermitage_b",0)], itp_merchandise|itp_type_shield, itcf_carry_round_shield,210,weight(4)|abundance(55)|hit_points(350)|body_armor(15)|spd_rtng(61)|shield_width(40)|difficulty(3),imodbits_shield,[],[fac_player_faction]],
 ####
+
 ]

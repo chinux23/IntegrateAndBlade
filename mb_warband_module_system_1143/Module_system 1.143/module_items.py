@@ -269,6 +269,7 @@ items = [
 ["lamellar_gauntlets","Lamellar Gauntlets", [("ga_khe_a6_lamellar_L",0)], itp_merchandise|itp_type_hand_armor,0, 910, weight(0.75)|abundance(100)|body_armor(5)|difficulty(0),imodbits_armor],
 ["gauntlets","Gauntlets", [("ga_pla_a6_iron_L",0),("ga_pla_a6_iron_L",imodbit_reinforced)], itp_merchandise|itp_type_hand_armor,0, 1040, weight(1.0)|abundance(100)|body_armor(6)|difficulty(0),imodbits_armor],
 
+
 #footwear
 ["wrapping_boots", "Wrapping Boots", [("bo_swa_t3_wrapping",0)], itp_merchandise| itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 3 , weight(1)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(3)|difficulty(0) ,imodbits_cloth ],
 ["woolen_hose", "Woolen Hose", [("bo_swa_t2_hose",0)], itp_merchandise| itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 6 , weight(1)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(4)|difficulty(0) ,imodbits_cloth ],
@@ -416,7 +417,7 @@ items = [
 ["coat_of_plates_red", "Coat of Plates", [("ar_swa_dip_coatplate_a",0)], itp_merchandise| itp_type_body_armor  |itp_covers_legs ,0, 3828 , weight(25)|abundance(100)|head_armor(0)|body_armor(52)|leg_armor(16)|difficulty(8) ,imodbits_armor ],
 ["plate_armor", "Plate Armor", [("ar_swa_t7_fullplate_a",0)], itp_merchandise| itp_type_body_armor  |itp_covers_legs ,0, 6553 , weight(27)|abundance(100)|head_armor(0)|body_armor(55)|leg_armor(17)|difficulty(9) ,imodbits_plate ],
 ["black_armor", "Black Armor", [("ar_pla_t7_knight_c",0)], itp_type_body_armor  |itp_covers_legs ,0, 9496 , weight(28)|abundance(100)|head_armor(0)|body_armor(57)|leg_armor(18)|difficulty(10) ,imodbits_plate ],
-
+ 
 ##armors_d
 ["pelt_coat", "Pelt Coat", [("ar_khe_shi_peltcoat",0)],  itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, 14, weight(2)|abundance(100)|head_armor(0)|body_armor(9)|leg_armor(1)|difficulty(0) ,imodbits_cloth ],
 ##armors_e
@@ -845,7 +846,7 @@ items = [
 ["practice_arrows_2","Practice Arrows", [("practice_arrows",0),("we_pla_arrow_flying",ixmesh_flying_ammo),("practice_arrows_quiver", ixmesh_carry)], itp_type_arrows, itcf_carry_quiver_back, 0,weight(1.5)|weapon_length(95)|max_ammo(80),imodbits_missile],
 
 
-["plate_boots", "Plate Boots", [("bo_nor_t7_greaves",0)], itp_merchandise| itp_type_foot_armor | itp_attach_armature,0, 1770 , weight(3.5)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(33)|difficulty(9) ,imodbits_plate ], 
+["plate_boots", "Plate Boots", [("bo_nor_t7_greaves",0), ("xie1", 0), ("xie2",0), ("xie3",0),("xie4",0),("xie5",0)], itp_merchandise| itp_type_foot_armor | itp_attach_armature,0, 1770 , weight(3.5)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(33)|difficulty(9) ,imodbits_plate ],
 
 ["heraldic_mail_with_surcoat_for_tableau", "Heraldic Mail with Surcoat", [("heraldic_armor_new_a",0)], itp_type_body_armor |itp_covers_legs ,0, 1, weight(22)|abundance(100)|head_armor(0)|body_armor(1)|leg_armor(1),imodbits_armor, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_heraldic_armor_a", ":agent_no", ":troop_no")])]],
 ["mail_boots_for_tableau", "Mail Boots", [("bo_swa_t6_mail",0)], itp_type_foot_armor | itp_attach_armature  ,0, 1, weight(3)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(1) ,imodbits_armor ],
@@ -854,7 +855,7 @@ items = [
 
 ##diplomacy begin
 
-["dplmc_coat_of_plates_red_constable", "Constable Coat of Plates", [("coat_of_plates_red",0)], itp_unique|itp_type_body_armor|itp_covers_legs|itp_civilian,0,
+["dplmc_coat_of_plates_red_constable", "Constable Coat of Plates", [("ar_swa_dip_coatplate_a",0)], itp_unique|itp_type_body_armor|itp_covers_legs|itp_civilian,0,
 
  3828 , weight(25)|abundance(100)|head_armor(0)|body_armor(52)|leg_armor(16)|difficulty(0) ,imodbits_armor, [], []],
 

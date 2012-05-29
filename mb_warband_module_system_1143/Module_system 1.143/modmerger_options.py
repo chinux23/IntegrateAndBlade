@@ -33,6 +33,7 @@ mods_active = [
     "itemsbasic",		# Minimal and Extended items for the Basic version
     "tournament",      # Tournament Play Enhancements (1.5)
     "gpu",                  # General Presentation Utilities (1.0)
+    "unique",           # my unique items
 ]
 
 
