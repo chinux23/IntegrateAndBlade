@@ -81,7 +81,7 @@ village_snow_burnt_a 1 map_village_snow_burnt_a 0.450000 0 0 0 0 0
 village_snow_deserted_a 1 map_village_snow_deserted_a 0.450000 0 0 0 0 0
 
 
-camp 1 camp_tent 0.130000 0 0 0 0 0
+camp 1 map_camp_tent 0.130000 0 0 0 0 0
 
 
 ship 1 boat_sail_on 0.230000 17 0.000000 0.050000 0.000000 0

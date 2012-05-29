@@ -70,3 +70,47 @@ Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000000, 0x00000000)
 0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
 0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
 >
+> Info
+Time: 22/05/2012 06:49:28 
+Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000000, 0x00000000)
+> Stack trace
+0x0050B740 mb_warband.exe+0x10B740 (??+0x0)
+0x00512187 mb_warband.exe+0x112187 (??+0x0)
+0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
+0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
+>
+> Info
+Time: 22/05/2012 06:59:30 
+Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000000, 0x00000000)
+> Stack trace
+0x0050B740 mb_warband.exe+0x10B740 (??+0x0)
+0x00512187 mb_warband.exe+0x112187 (??+0x0)
+0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
+0x00513F36 mb_warband.exe+0x113F36 (??+0x0)
+>
+> Info
+Time: 24/05/2012 05:42:44 
+Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000001, 0x00000134)
+> Stack trace
+0x0046FEC3 mb_warband.exe+0x6FEC3 (??+0x0)
+0x7719E38C ntdll.dll+0x2E38C (RtlInitUnicodeString+0x164)
+0x0041A6EB mb_warband.exe+0x1A6EB (??+0x0)
+0x74E3339A kernel32.dll+0x1339A (BaseThreadInitThunk+0x12)
+0x771A9EC5 ntdll.dll+0x39EC5 (RtlInitializeExceptionChain+0x36)
+0x0067A7DD mb_warband.exe+0x27A7DD (??+0x0)
+0xFFFFFFFFFFFDE000 ??+0xFFFFFFFFFFFDE000 (??+0x0)
+0xFFFFFFFFFFFDE000 ??+0xFFFFFFFFFFFDE000 (??+0x0)
+>
+> Info
+Time: 24/05/2012 05:44:33 
+Type: EXCEPTION_ACCESS_VIOLATION (0xC0000005, 0x00000001, 0x00000134)
+> Stack trace
+0x0046FEC3 mb_warband.exe+0x6FEC3 (??+0x0)
+0x7719E38C ntdll.dll+0x2E38C (RtlInitUnicodeString+0x164)
+0x0041A6EB mb_warband.exe+0x1A6EB (??+0x0)
+0x74E3339A kernel32.dll+0x1339A (BaseThreadInitThunk+0x12)
+0x771A9EC5 ntdll.dll+0x39EC5 (RtlInitializeExceptionChain+0x36)
+0x0067A7DD mb_warband.exe+0x27A7DD (??+0x0)
+0xFFFFFFFFFFFDE000 ??+0xFFFFFFFFFFFDE000 (??+0x0)
+0xFFFFFFFFFFFDE000 ??+0xFFFFFFFFFFFDE000 (??+0x0)
+>
